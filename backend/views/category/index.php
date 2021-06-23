@@ -1,10 +1,12 @@
 <?php
 
+use backend\models\search\NewsSearch;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var $searchModel NewsSearch */
 
 $this->title = Yii::t('app', 'Categories');
 $this->params['breadcrumbs'][] = $this->title;
@@ -28,10 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'enabled:boolean',
 
-        [
-            'class' => 'yii\grid\ActionColumn',
-            'template' => '{update} {delete}'
-        ],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{update} {delete}'
+            ],
         ],
     ]); ?>
 

@@ -10,4 +10,14 @@ class Tag extends ActiveRecord
     {
         return '{{%tag}}';
     }
+
+    public function getTagToNews()
+    {
+        return $this->hasOne(TagToNews::class, ['tag_id' => 'id']);
+    }
+
+    public function getNews()
+    {
+        return $this->hasOne(News::class, ['id' => 'news_id'])->via('tagToNews');
+    }
 }

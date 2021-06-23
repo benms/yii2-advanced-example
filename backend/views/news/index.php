@@ -1,10 +1,12 @@
 <?php
 
+use backend\models\search\NewsSearch;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var $searchModel NewsSearch */
 
 $this->title = Yii::t('app', 'News');
 $this->params['breadcrumbs'][] = $this->title;
@@ -21,6 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php echo GridView::widget([
         'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
         'columns' => [
 
             'id',
