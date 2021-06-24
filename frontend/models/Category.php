@@ -6,8 +6,13 @@ use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
 
 /**
- * Class Category
- * @package frontend\models
+ * This is the model class for table "{{%category}}".
+ *
+ * @property int $id
+ * @property string $slug
+ * @property string $title
+ * @property bool $enabled
+ *
  * @property News[]|null $news
  */
 class Category extends ActiveRecord

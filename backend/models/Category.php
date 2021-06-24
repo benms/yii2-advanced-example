@@ -12,7 +12,7 @@ use yii\behaviors\SluggableBehavior;
  * @property string $title
  * @property bool $enabled
  *
- * @property News[] $news
+ * @property News[]|null $news
  */
 class Category extends \yii\db\ActiveRecord
 {
