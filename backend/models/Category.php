@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use yii\behaviors\SluggableBehavior;
+use \common\models\Category as BaseCategory;
 
 /**
  * This is the model class for table "{{%category}}".
@@ -14,7 +15,7 @@ use yii\behaviors\SluggableBehavior;
  *
  * @property News[]|null $news
  */
-class Category extends \yii\db\ActiveRecord
+class Category extends BaseCategory
 {
     /**
      * {@inheritdoc}

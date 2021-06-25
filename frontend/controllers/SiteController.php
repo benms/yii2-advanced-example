@@ -142,7 +142,6 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return __METHOD__;
         return $this->render('about');
     }
 

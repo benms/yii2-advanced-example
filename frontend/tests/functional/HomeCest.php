@@ -9,9 +9,11 @@ class HomeCest
     public function checkOpen(FunctionalTester $I)
     {
         $I->amOnPage(\Yii::$app->homeUrl);
-        $I->see('My Application');
-        $I->seeLink('About');
-        $I->click('About');
-        $I->see('This is the About page.');
+        $I->see('My application');
+        $I->see('You have successfully created your Yii-powered application.');
+        $I->seeLink('Get started with Yii');
+        $I->see('Tag');
+        $I->see('News');
+        $I->see('Category');
     }
 }

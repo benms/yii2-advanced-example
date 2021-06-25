@@ -12,6 +12,7 @@ echo Html::tag('h2', Html::encode($title));
 //echo Html::a('Go to view page', ['news/view', 'id' => 1]);
 
     echo ListView::widget([
+        'id' => 'newsGrid',
         'dataProvider' => $dataProvider,
         'itemView' => '_news_item_short',
         'itemOptions' => ['tag' => null],
